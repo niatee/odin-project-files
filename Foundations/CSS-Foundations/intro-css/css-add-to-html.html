@@ -1,0 +1,44 @@
+<!-- Exteral CSS -->
+
+<!-- Involves creating a separate file for the CSS and linking it inside HTML file's opening and closing <head> tags using <link> element-->
+
+    <head>
+
+        <!-- HREF based on absolute URL or, what you’ll be utilizing, a URL relative to the location of the HTML file -->
+         <!-- This example assumes that they are both in the same directory -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+
+
+
+
+<!-- Internal CSS -->
+
+<!-- Adding CSS within the HTML file itself -->
+<!-- Place  all CSS within <style> tags which are in the <head> tags, no link eleent required-->
+
+    <head>
+        <style>
+          div {
+            color: white;
+            background-color: black;
+          }
+      
+          p {
+            color: red;
+          }
+        </style>
+    </head>
+
+
+
+
+
+<!-- Inline CSS -->
+
+<!-- Add styles directly to the HTML element through the use of the [style=" "] attribute -->
+
+<body>
+    <div style="color: white; background-color: black;">...</div>
+</body>
