@@ -1,0 +1,173 @@
+/* Basic Syntax */
+
+div.bold-text {
+    font-weight: 700;
+}
+
+/* 3 Main Parts: Selector, Semicolon-Separated List of Declarations, Property Value Pairs for each Declaration */
+/* <div> (HTML) = empty container. Generally use <h1> or <p> for content, but many cases where what you need is a container for other elements. */
+
+
+
+/* Selectors */
+
+/* Refer to the HTML elements to which CSS rules apply, what is actually being selected for each rule */
+/* Many more selectors than the ones below, though those are most common */
+
+
+
+
+/* Universal Selector*/
+
+* {
+    color: purple;
+}
+
+/*          SYNTAX: [*]         */
+/* select elements of ~ANY~ type to apply rule to*/
+
+
+
+
+
+/* Type Selector */
+
+div {
+    color: white;
+}
+
+/*          SYNTAX: [element-name]         */
+/* all <div> elements would be selected, but others like <p> would ~NOT~ be selected */
+
+
+
+
+
+/* Class Selector */
+
+/* <div class="alert-text">Please agree to our terms of service.</div> */
+.alert-text {
+    color: red;
+}
+
+/*          SYNTAX: [.____]         */
+/* selects all elements with the given class */
+/* you can have multiple classes in a single element by addingin a space between them like { class="alert-text severe-alert" } */
+
+
+
+
+
+
+/* ID Selector */
+
+/* <div id="title">My Awesome 90's Page</div> */
+#title {
+    background-color: red;
+}
+
+
+/*          SYNTAX: [#____]         */
+/* selects all elements with the given id */
+/* differs from  class selector in that an element can only have one ID, and it cannot be repeated on a single page*/
+/*  There are cases where using an ID makes sense or is needed - like taking advantage of specificity or having 
+links redirect to a section on the current page, you should use IDs sparingly (if at all). */
+
+
+
+
+
+/* Grouping Selector */
+
+.read {
+    color: white;
+    background-color: black;
+    /* several unique declarations */
+  }
+  
+  .unread {
+    color: white;
+    background-color: black;
+    /* several unique declarations */
+  }
+
+  /* becomes the following */
+
+  .read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations */
+}
+
+.unread {
+  /* several unique declarations */
+}
+
+
+/* comma separated names fo the classes, with the common declarations being in the comma seaparated area. The unique decs. are still in their own. */
+/* makes it easier to edit common declarations for different classes at once. */
+
+
+
+/* Chaining Selector */
+
+/* Given this HTML:
+
+    <div>
+        <div class="subsection header">Latest Posts</div>
+        <p class="subsection preview">This is where a preview for a post might go.</p>
+    </div>
+
+*/
+
+/* 2 elements with subsection class, but want to apply separate rule to element that also has header as a second class, can use chain like so:*/
+
+.subsection.header {
+    color: red;
+}
+
+  /* can also be used for chaining a class and ID like so */
+
+  .subsection.header {
+    color: red;
+}
+  
+  .subsection#preview {
+    color: blue;
+}
+
+
+
+/* Descendant Combinator */
+
+/*
+
+<div class="ancestor">
+  <!-- A -->
+  <div class="contents">
+    <!-- B -->
+    <div class="contents"><!-- C --></div>
+  </div>
+</div>
+
+<div class="contents"><!-- D --></div>
+
+*/
+
+
+.ancestor .contents {
+    /* some declarations */
+}  
+
+
+/* Given this example A and B are selected */
+
+
+
+/* SYNTAX: SINGLE SPACE BETWEEN SELECTORS */
+/* Show the relationship between combined selectors */
+/* Allows the combination of multiple selectors differently than either grouping or chaining */
